@@ -24,8 +24,7 @@
             <!-- Top image -->
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="450dp"
-                android:layout_marginTop="4dp"
+                android:layout_height="460dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/hometop"
                 android:contentDescription="Home top image"
@@ -35,6 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginTop="6dp"
                 android:paddingHorizontal="16dp"
                 android:gravity="center">
 

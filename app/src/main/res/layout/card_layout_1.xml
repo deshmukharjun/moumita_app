@@ -36,7 +36,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Moumita Mishra"
+                    android:text="Manya Nihalani"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="16sp" />
@@ -44,13 +44,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New York - US"
+                    android:text="California - US"
                     android:textColor="#3F51B5"
                     android:textSize="14sp" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/followbtn"
+                android:id="@+id/followbtn1"
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
                 android:paddingHorizontal="12dp"
@@ -139,7 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginStart="16dp"
-            android:text="Liked by Plaaksha and others 1,900"
+            android:text="Liked by Moumita and others 1,900"
             android:textColor="@color/black" />
 
         <LinearLayout

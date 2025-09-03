@@ -1,5 +1,6 @@
 package com.example.moumita
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
@@ -39,20 +40,28 @@ class FeedsActivity : AppCompatActivity() {
 
         // Find the Follow button by its ID
         val followButton = findViewById<TextView>(R.id.followbtn)
+        val followButton1 = findViewById<TextView>(R.id.followbtn1)
+        val followButton2 = findViewById<TextView>(R.id.followbtn2)
 
-        // Set the click listener for the button
-        followButton.setOnClickListener {
-            // Check the current text of the button
-            if (followButton.text == "Follow") {
+        // Set the click listeners for each button correctly
+        setupFollowButton(followButton)
+        setupFollowButton(followButton1)
+        setupFollowButton(followButton2)
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun setupFollowButton(button: TextView) {
+        button.setOnClickListener {
+            if (button.text == "Follow") {
                 // Change to "Following" state
-                followButton.text = "Following"
-                followButton.setBackgroundResource(R.drawable.gray_bg)
-                followButton.setTextColor(ContextCompat.getColor(this, android.R.color.black))
+                button.text = "Following"
+                button.setBackgroundResource(R.drawable.gray_bg)
+                button.setTextColor(ContextCompat.getColor(this, android.R.color.black))
             } else {
                 // Change back to "Follow" state
-                followButton.text = "Follow"
-                followButton.setBackgroundResource(R.drawable.follow_bg)
-                followButton.setTextColor(ContextCompat.getColor(this, android.R.color.white))
+                button.text = "Follow"
+                button.setBackgroundResource(R.drawable.follow_bg)
+                button.setTextColor(ContextCompat.getColor(this, android.R.color.white))
             }
         }
     }

@@ -20,7 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_back" />
+            android:src="@drawable/ic_back"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:layout_width="0dp"
@@ -37,7 +38,8 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:padding="2dp"
-            android:src="@drawable/ic_more" />
+            android:src="@drawable/ic_more"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     </LinearLayout>
 
@@ -122,6 +124,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
+        android:layout_marginBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="16dp">
@@ -130,7 +133,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_camera" />
+            android:src="@drawable/ic_camera"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/messageEditText"
@@ -140,12 +144,14 @@
             android:layout_weight="1"
             android:background="@drawable/gray_bg"
             android:focusable="true"
+            android:textSize="16sp"
             android:textColorHint="@color/black"
             android:focusableInTouchMode="true"
             android:hint="Send a message"
             android:padding="8dp"
             android:text="How to create a FinX Stock account?"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
 
         <ImageButton
             android:id="@+id/sendButton"
@@ -153,7 +159,8 @@
             android:layout_height="match_parent"
             android:background="@android:color/transparent"
             android:contentDescription="Send Message"
-            android:src="@drawable/ic_send" />
+            android:src="@drawable/ic_send"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
     </LinearLayout>
 
 </LinearLayout>

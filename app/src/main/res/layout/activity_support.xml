@@ -1,132 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="12dp"
     android:background="@android:color/white"
+    android:orientation="vertical"
     tools:context=".SupportActivity">
 
-    <!-- Top Bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="42dp"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:padding="12dp">
 
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_back"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="Support"
+            android:textColor="@color/black"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="2dp"
+            android:src="@drawable/ic_more" />
+
     </LinearLayout>
 
-    <!-- Chat container -->
     <LinearLayout
+        android:id="@+id/chatContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical"
         android:padding="12dp">
 
-        <!-- First message (left) -->
         <LinearLayout
+            android:id="@+id/botMessage1Container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="start"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
-
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/agent1"
-                android:layout_marginRight="8dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_chat_left"
-                android:text="Hi Kitsbase, Let me know you need help and you can ask us any questions."
-                android:textSize="14sp"
-                android:padding="8dp"/>
-        </LinearLayout>
-
-        <!-- Second message (right) -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="end"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_chat_right"
-                android:text="How to create a FinX Stock account?"
-                android:textSize="14sp"
-                android:padding="8dp"
-                android:textColor="@android:color/black"/>
-        </LinearLayout>
-
-        <!-- Third message (left) -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:gravity="start"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/agent1"
-                android:layout_marginRight="8dp"/>
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/agent1" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_chat_left"
-                android:text="Open the FinX Stock app to get started and follow the steps..."
-                android:textSize="14sp"
-                android:padding="8dp"/>
+                android:padding="8dp"
+                android:text="Hi Kitsbase, Let me know you need help and you can ask us any questions."
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userMessageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chat_right"
+                android:padding="8dp"
+                android:text="How to create a FinX Stock account?"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/botMessage2Container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/agent1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chat_left"
+                android:padding="8dp"
+                android:text="Open the FinX Stock app to get started and follow the steps. FinX Stock doesn't charge a fee to create or maintain your FinX Stock account."
+                android:textColor="@color/black"
+                android:textSize="14sp" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <!-- Bottom input bar (static, non-functional) -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="8dp"
-        android:background="#F8F8F8">
-
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="Write a comment"
-            android:background="@android:color/white"
-            android:padding="8dp"/>
+        android:padding="16dp">
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_back"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_camera" />
+
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/gray_bg"
+            android:focusable="true"
+            android:textColorHint="@color/black"
+            android:focusableInTouchMode="true"
+            android:hint="Send a message"
+            android:padding="8dp"
+            android:text="How to create a FinX Stock account?"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:contentDescription="Send Message"
+            android:src="@drawable/ic_send" />
     </LinearLayout>
 
 </LinearLayout>

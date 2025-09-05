@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="#E3F4E1">
 
-    <!-- Scrollable content (image + cards) -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,14 +20,32 @@
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
-            <!-- Top image -->
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="460dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/hometop"
-                android:contentDescription="Home top image"
-                tools:ignore="HardcodedText" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="420dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/blankhometop"
+                    android:contentDescription="Home top image"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/animated_balance_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginBottom="120dp"
+                    android:layout_marginTop="100dp"
+                    android:text="$0"
+                    android:textColor="@color/black"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </FrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -37,14 +54,11 @@
                 android:layout_marginTop="6dp"
                 android:paddingHorizontal="16dp"
                 android:gravity="center">
-
-                <!-- Monthly Budget Card -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="12dp">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -52,19 +66,16 @@
                         android:background="@color/white"
                         android:padding="16dp"
                         android:gravity="center_vertical">
-
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/icon1card"/>
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:orientation="vertical"
                             android:layout_marginStart="12dp">
-
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -72,7 +83,6 @@
                                 android:textStyle="bold"
                                 android:textSize="16sp"
                                 android:textColor="@android:color/black" />
-
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -80,7 +90,6 @@
                                 android:textSize="13sp"
                                 android:textColor="#777" />
                         </LinearLayout>
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -90,14 +99,11 @@
                             android:textColor="@android:color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
-                <!-- Cash Card -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="12dp">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -105,7 +111,6 @@
                         android:background="@color/white"
                         android:padding="16dp"
                         android:gravity="center_vertical">
-
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
@@ -113,7 +118,6 @@
                             android:background="@drawable/circle_bg_green"
                             android:padding="8dp"
                             app:tint="@android:color/black" />
-
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -123,7 +127,6 @@
                             android:textStyle="bold"
                             android:textSize="16sp"
                             android:textColor="@android:color/black" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -133,14 +136,11 @@
                             android:textColor="@android:color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
-                <!-- Credit Cards -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="12dp">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -148,7 +148,6 @@
                         android:background="@color/white"
                         android:padding="16dp"
                         android:gravity="center_vertical">
-
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
@@ -156,7 +155,6 @@
                             android:background="@drawable/circle_bg_purple"
                             android:padding="8dp"
                             app:tint="@android:color/black" />
-
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -166,7 +164,6 @@
                             android:textStyle="bold"
                             android:textSize="16sp"
                             android:textColor="@android:color/black" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -176,13 +173,10 @@
                             android:textColor="@android:color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
-                <!-- Investments -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="12dp">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -190,7 +184,6 @@
                         android:background="@color/white"
                         android:padding="16dp"
                         android:gravity="center_vertical">
-
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
@@ -198,7 +191,6 @@
                             android:background="@drawable/circle_bg_gray"
                             android:padding="8dp"
                             app:tint="@android:color/black" />
-
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -208,7 +200,6 @@
                             android:textStyle="bold"
                             android:textSize="16sp"
                             android:textColor="@android:color/black" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -218,16 +209,10 @@
                             android:textColor="@android:color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
-
             </LinearLayout>
-
-
-
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         app:itemTextColor="@color/white"
